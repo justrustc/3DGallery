@@ -1,0 +1,83 @@
+body,div,nav,span {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    background: url('../images/bg.jpg');
+    text-align: center;
+}
+
+.container {
+    width: 481px;
+    height: 300px;
+    margin: 120px auto 0 auto;
+    position: relative;
+    -*-perspective: 1000px;
+    -*-transform-style: preserve-3d;
+}
+
+.container .box {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    -*-transition: all 0.5s ease-in-out;
+}
+.container .show{
+    visibility: visible;
+    position: static;
+    margin-bottom: 20px;
+}
+
+.container .transition {
+    -*-transition: all 0.5s ease-in-out;
+}
+
+.container .cur {
+    visibility: visible;
+}
+
+.container .left {
+    visibility: visible;
+    -*-transform: translateX(-350px) translateZ(-200px) rotateY(45deg);
+}
+
+.container .right {
+    visibility: visible;
+    -*-transform: translateX(350px) translateZ(-200px) rotateY(-45deg);
+}
+
+.container .leftout {
+    visibility: hidden;
+    -*-transform: translateX(-450px) translateZ(-200px) rotateY(45deg);
+}
+
+.container .rightout {
+    visibility: hidden;
+    -*-transform: translateX(450px) translateZ(-300px) rotateY(-45deg)
+}
+
+.container nav {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 90px;
+    margin-left: -29px;
+    z-index: 1000
+}
+
+.btn {
+    cursor: pointer;
+    width: 24px;
+    height: 25px;
+    display: inline-block;
+    background: transparent url('../images/arrows.png') no-repeat top left;
+}
+
+.next {
+    background-position: top right;
+    margin-left: 10px;
+}
